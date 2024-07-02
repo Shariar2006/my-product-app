@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Table, Button } from 'antd';
 import { useGetProductsQuery } from '../redux/api';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './Product.css'
 
 const ProductList: React.FC = () => {
   const [page, setPage] = useState(1);
@@ -27,13 +28,13 @@ const ProductList: React.FC = () => {
       title: 'Actions',
       key: 'actions',
       render: (text: string, record: any) => (
-        <Button onClick={() => navigate(`/products/${record.id}`)}>View Details</Button>
+        <Button><Link to={`/products/${record.id}`}>View Details</Link></Button>
       ),
     },
   ];
 
   return (
-    <Table
+    <Table className='productTable'
       dataSource={data.products}
       columns={columns}
       pagination={{ current: page, pageSize: 10, total: data.total, onChange: setPage }}

@@ -11,8 +11,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <Layout>
-        <Header style={{ color: 'white', cursor: 'pointer' }}><Link style={{ color: 'white', cursor: 'pointer' }} to={'/'}>My Product App</Link></Header>
-        <Content style={{ padding: '0 50px' }}>
+        <Header style={{ color: 'white', background: '#28C8A4', cursor: 'pointer' }}><Link style={{ color: 'white', cursor: 'pointer', fontSize: '18px', fontWeight: '500' }} to={'/'}>My Product App</Link></Header>
+        <Content style={{ padding: '0 50px', minHeight: '80vh'}}>
           <Routes>
             <Route path="/" element={<ProductList />} />
             <Route path="/products/:id" element={<ProductDetail />} />
