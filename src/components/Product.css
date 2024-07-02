@@ -11,3 +11,34 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.card{
+    text-align: center;
+    width: 400px;
+}
+
+.card h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card p{
+    color: rgb(120, 120, 120);
+    font-weight: 400;
+}
+
+.card h3{
+    font-size: 30px;
+    color: #28C8A4;
+}
+
+.card button{
+    font-size: 16px;
+    border: none;
+    background: #28C8A4;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+}

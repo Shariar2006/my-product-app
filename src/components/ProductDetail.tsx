@@ -27,9 +27,8 @@ const ProductDetail: React.FC = () => {
       </Descriptions>
       <Button onClick={() => navigate(`/products/edit/${id}`)}>Edit Product</Button> */}
 
-            <Card className=''
+            <Card className='card'
             hoverable
-                style={{ width: 400 }}
                 cover={
                     <img
                         alt="example"
@@ -44,7 +43,7 @@ const ProductDetail: React.FC = () => {
                 /> */}
                 <h2>{data.title}</h2>
                 <p>{data.description}</p>
-                <h3 style={{color: '#28C8A4'}}>${data.price}</h3>
+                <h3>${data.price}</h3>
                 <Rate allowHalf defaultValue={data.rating} />
                 <br />
                 <button onClick={() => navigate(`/products/edit/${id}`)}>Edit Product</button>
