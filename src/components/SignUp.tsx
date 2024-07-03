@@ -28,7 +28,7 @@ const SignUp: React.FC = () => {
                         showConfirmButton: false,
                         timer: 2000
                     });
-                    navigate('/')
+                    navigate('/sign-in')
                 })
             //   history.push('/');
         } catch (error) {
@@ -69,7 +69,7 @@ return (
             </Form.Item>
             <Divider plain>or</Divider>
             <img onClick={loginWithGoogle} style={{ width: '320px', cursor: 'pointer' }} src={googleImg} alt="img" />
-            <p>Already have an account? Please <Link to='/sign-in'>Login</Link></p>
+            <p>Already have an account? Please <Link to='/sign-in'>Sign In</Link></p>
 
         </Form>
     </Card>
