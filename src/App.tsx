@@ -4,6 +4,8 @@ import { Layout } from 'antd';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import EditProduct from './components/EditProduct';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
 
 const { Header, Content, Footer } = Layout;
 
@@ -15,6 +17,8 @@ const App: React.FC = () => {
         <Content style={{ padding: '0 50px', minHeight: '80vh'}}>
           <Routes>
             <Route path="/" element={<ProductList />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/sign-in" element={<SignIn />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/products/edit/:id" element={<EditProduct />} />
           </Routes>

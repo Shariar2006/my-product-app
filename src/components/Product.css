@@ -32,7 +32,7 @@
     color: #28C8A4;
 }
 
-.card button{
+.card button, .signUpCard{
     font-size: 16px;
     border: none;
     background: #28C8A4;

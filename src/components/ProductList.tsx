@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'antd';
 import { useGetProductsQuery } from '../redux/api';
 import { Link, useNavigate } from 'react-router-dom';
 import './Product.css'
+import { useAuth } from '../context/AuthProvider';
 
 const ProductList: React.FC = () => {
   const [page, setPage] = useState(1);
   const { data, error, isLoading } = useGetProductsQuery({ limit: 10, skip: (page - 1) * 10 });
   const navigate = useNavigate();
-  console.log(data)
+  const { currentUser } = useAuth();
+
+
+  useEffect(() => {
+    if (!currentUser) {
+      navigate('/sign-up');
+    }
+  }, [currentUser, navigate]);
+
+
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
